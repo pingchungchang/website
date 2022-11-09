@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script type = "text/javascript">
+            var rickroll = function(){
+                alert("rickroll!");
+            }
+            var hide = function(elmt){ 
+                if(elmt.style.display == 'none'){
+                    elmt.style.display = "block";
+                }
+                else{
+                    elmt.style.display ='none';
+                }
+            }
+        </script>
         <!-- <link href="styles.css" rel="'stylesheet"> -->
     </head>
-    <body bgcolor="3F3F3F"><center>
+    <body bgcolor="green"><center>
         <style type="text/css">
             .highlight
             {
@@ -18,16 +31,25 @@
             }
         </style>
         <div>
-            <img src="hinagiku.png" style = 'width:500px;height:900px;float:right'>
+            <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+                <img src="hinagiku.png" style = 'width:500px;height:900px;float:right' href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+            </a>
             <center>
                 <P class="highlight">This website isn't done yet!</P>
-                <h1 style = "color: #FFFFFF;">PCC's Testing Website</h1>
-                <a href = "https://pingchungchang.github.io/website.github.io/coding.html" style ="font-size:20px;color:#00FFFF">testing again</a><br>
-                <a href = 'https://codeforces.com/profile/PCC' style = "font-size:20px;color:#00F0FF">Codeforce Link</a><br>
-                <a href = 'https://atcoder.jp/users/s10755168' style = 'font-size:20px;color:#00FFFF;'>Atcoder Link</a><br>
-                <a href = 'https://tioj.ck.tp.edu.tw/users/pingchungchang' style = 'font-size:20px;color:#FFFFFF;'>TIOJ Link</a>
+                <h1 style = "color: #00ffff;">PCC's Testing Website</h1>
+                <div onclick = "hide(menu)"><a style='color:#FFF0F0'>catelogue</a></div>
+                <div><ul id="menu"><a style="color:#FFFFFF">HI</a><br>
+                    <a href = "https://pingchungchang.github.io/website.github.io/coding.html" style ="font-size:20px;color:#00FFFF">testing again</a><br></li>
+                    <a href = 'https://codeforces.com/profile/PCC' style = "font-size:20px;color:#00F0FF">Codeforce Link</a><br>
+                    <a href = 'https://atcoder.jp/users/s10755168' style = 'font-size:20px;color:#00FFFF;'>Atcoder Link</a><br>
+                    <a href = 'https://tioj.ck.tp.edu.tw/users/pingchungchang' style = 'font-size:20px;color:#00FFFF;'>TIOJ Link</a>
 
+                </ul>
+                </div>
             </center>
+        </div>
+        <div>
+            <a style = "font-size:20px;color: #F0F000;" onclick = "rickroll()">Useful Resources</a>
         </div>
         <!-- <br> -->
     </body>
