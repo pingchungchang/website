@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+
+        </style>
         <script type = "text/javascript">
+
+            var movedown = function(obj){
+                console.log(typeof(obj))
+                obj.style.position = "absolute";
+                obj.style.top = (parseInt(obj.offsetTop)+1)+"px";
+            }
+            var moveleft = function(obj){
+                obj.style.position = "absolute";
+                obj.style.left = (parseInt(obj.offsetLeft)-1)+"px";
+            }
+            var moveup = function(obj){
+                obj.style.position = "absolute";
+                obj.style.top = (parseInt(obj.offsetTop)-1)+"px";
+            }
+            var moveright = function(obj){
+                obj.style.position = "absolute";
+                obj.style.left = (parseInt(obj.offsetLeft)+1)+"px";
+            }
+             setTimeout(function(){
+                starter1s = document.getElementsByClassName("starter1");
+                 for(i=0;i<starter1s.length;i+=1){
+                    movedown(starter1s[i]);
+                }
+            },1000)
+            setTimeout(function(){
+                starter1s = document.getElementsByClassName("starter1");
+                for(i=0;i<starter1s.length;i+=1){
+                    movedown(starter1s[i]);
+                    // starter1s.style.position = "absolute"
+                }
+            },2000)
+             setTimeout(function(){
+                console.log("hi")
+                starter1s = document.getElementsByClassName("starter1");
+                for(i=0;i<starter1s.length;i+=1){
+                    moveup(starter1s[i]);
+                }
+            },5000)
             var rickroll = function(){
                 alert("rickroll!");
             }
@@ -31,13 +72,13 @@
             }
         </style>
         <div>
-            <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
-                <img src="hinagiku.png" style = 'width:500px;height:900px;float:right' href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+            <a href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' class="starter1" style='position:absolute;left:1200px;top:0px'>
+                <img src="hinagiku.png" style = 'width:250px;height:600px;position:absolute;left:0px;top:0px' href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
             </a>
             <center>
                 <P class="highlight">This website isn't done yet!</P>
                 <h1 style = "color: #00ffff;">PCC's Testing Website</h1>
-                <div onclick = "hide(menu)"><a style='color:#FFF0F0'>catelogue</a></div>
+                <div onclick = "hide(menu)"><a style='color:#FFF0F0'>catalogue</a></div>
                 <div><ul id="menu"><a style="color:#FFFFFF">HI</a><br>
                     <a href = "https://pingchungchang.github.io/website.github.io/coding.html" style ="font-size:20px;color:#00FFFF">testing again</a><br></li>
                     <a href = 'https://codeforces.com/profile/PCC' style = "font-size:20px;color:#00F0FF">Codeforce Link</a><br>
